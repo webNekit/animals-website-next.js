@@ -10,7 +10,7 @@ const Navbar = ({ containerStyle }) => {
                     {NavbarMenu.map((item, index) => {
                         return (
                             <li key={index} className="inline-flex">
-                                <Link href={item.url} className='p-2 text-zinc-700 transition-colors duration-300 hover:text-zinc-700/50'>{item.label}</Link>
+                                <Link href={item.url} className='p-2 text-zinc-700 font-medium transition-colors duration-300 hover:text-zinc-700/50'>{item.label}</Link>
                             </li>
                         );
                     })}
