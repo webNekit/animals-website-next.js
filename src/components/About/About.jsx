@@ -3,11 +3,11 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section className='w-full py-10'>
+    <section className='w-full py-12'>
       <div className="container mx-auto">
-        <div className="w-full flex flex-col gap-6">
+        <div className="w-full flex flex-col gap-10">
             <h2 className='section-title'>О нас</h2>
-            <p className="text-center text-xl">
+            <p className="text-center text-xl max-w-xl mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad magni iure ratione, totam odio error ullam cupiditate eum ipsam. Pariatur dolorem nesciunt explicabo perspiciatis itaque!
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">

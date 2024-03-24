@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 const Banner = () => {
   return (
-    <section className='w-full py-8'>
+    <section className='w-full py-12'>
       <div className="container mx-auto">
         <div className="w-full h-full sm:h-[435px] sm:max-h-full border border-zinc-300 rounded-lg">
           <Swiper slidesPerView={1} loop="true"  autoplay={{ delay: 500, disableOnInteraction: false }} className='overflow-hidden h-full relative'>
