@@ -12,7 +12,7 @@ const Banner = () => {
   return (
     <section className='w-full py-8'>
       <div className="container mx-auto">
-        <div className="w-full h-full sm:h-[500px] sm:max-h-full border border-zinc-300 rounded-lg">
+        <div className="w-full h-full sm:h-[435px] sm:max-h-full border border-zinc-300 rounded-lg">
           <Swiper slidesPerView={1} className='overflow-hidden h-full relative'>
             <SwiperSlide className='w-full h-full'>
               <div className="w-full h-full flex flex-col sm:flex-row">
