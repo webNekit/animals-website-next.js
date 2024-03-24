@@ -3,17 +3,17 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperButton from '../SwiperButtons/SwiperButton';
 
 // styles for swiper
 import 'swiper/css';
 import 'swiper/css/navigation';
-import SwiperButton from '../SwiperButtons/SwiperButton';
 const Banner = () => {
   return (
     <section className='w-full py-8'>
       <div className="container mx-auto">
         <div className="w-full h-full sm:h-[435px] sm:max-h-full border border-zinc-300 rounded-lg">
-          <Swiper slidesPerView={1} className='overflow-hidden h-full relative'>
+          <Swiper slidesPerView={1} loop="true"  autoplay={{ delay: 500, disableOnInteraction: false }} className='overflow-hidden h-full relative'>
             <SwiperSlide className='w-full h-full'>
               <div className="w-full h-full flex flex-col sm:flex-row">
                 <div className='w-full order-2 sm:order-1 px-8 py-8 sm:w-8/12 md:w-4/12 flex flex-col items-start gap-5'>
@@ -38,7 +38,7 @@ const Banner = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperButton containerStyles={'absolute bottom-6 right-4 -translate-x-[50%] sm:-translate-x-0 sm:right-8 sm:bottom-8 '}/>
+            <SwiperButton containerStyles={'absolute bottom-2 -right-10 border border-zinc-300 -translate-x-[50%] sm:-translate-x-0 sm:right-8 sm:bottom-8 '}/>
           </Swiper>
         </div>
       </div>

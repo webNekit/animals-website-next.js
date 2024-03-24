@@ -73,4 +73,7 @@
   body {
     @apply bg-background text-foreground;
   }
+  .section-title {
+    @apply uppercase text-4xl sm:text-5xl text-center text-zinc-800 font-bold
+  }
 }
