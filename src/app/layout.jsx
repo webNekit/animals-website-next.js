@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
-const roboto = Roboto({ 
+const roboto = Roboto({
   subsets: ["cyrillic"],
   weight: ['300', '400', '500', '700'],
   variable: "--font-roboto",
@@ -18,13 +18,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ru">
       <body className={`${roboto.className} w-full bg-white text-zinc-700`}>
-        <Header />
-        <main className="w-full" id="main">
-          <div className="w-full" id="content-page">
-            {children}
-          </div>
-        </main>
-        <Footer />
+        <div className="__next">
+          <Header />
+          <main className="w-full" id="main">
+            <div className="w-full" id="content-page">
+              {children}
+            </div>
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
