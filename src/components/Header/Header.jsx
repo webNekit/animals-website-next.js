@@ -25,7 +25,7 @@ const Header = () => {
             </li>
           </ul>
           <div className='inline-flex order-1 sm:order-2'>
-            <Link href="" className=''>
+            <Link href="/" className=''>
               <Image src="/assets/img/logo.png" alt="Логотип сайта" width={200} height={60} />
             </Link>
           </div>

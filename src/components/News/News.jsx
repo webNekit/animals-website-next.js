@@ -1,8 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaAngleRight } from "react-icons/fa6";
-import { FaCalendarDays } from "react-icons/fa6";
 import NewsList from '../NewsList/NewsList';
 
 const News = ({ newsData }) => {

@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaAngleRight } from "react-icons/fa6";
-import { FaCalendarDays } from "react-icons/fa6";
+import { FaRegCalendar } from "react-icons/fa6";
 
 const NewsList = ({ getData }) => {
     return (
@@ -14,7 +14,7 @@ const NewsList = ({ getData }) => {
                             <h3 className="text-zinc-800 text-left font-medium text-lg">Lorem ipsum dolor sit amet.</h3>
                             <div className="flex items-center gap-2">
                                 <span className="flex items-center gap-2">
-                                    <FaCalendarDays className="opacity-70 text-base" />
+                                    <FaRegCalendar className="opacity-70 text-base" />
                                     12.03.2024
                                 </span>
                             </div>
