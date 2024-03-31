@@ -17,7 +17,7 @@ const Pets = () => {
                     </div>
                     <h3 className="text-left text-zinc-800 text-2xl font-medium mt-5">Вафля</h3>
                     <p className="text-left mt-1">Овчарка, девочка, 2 года</p>
-                    <Link href={'/'} className='flex items-center gap-2 text-lg text-pink-500 font-medium mt-5 hover:ml-2 transition-all'>Узнать подробнее <FaChevronRight className='text-sm'/></Link>
+                    <Link href={'/'} className='inline-block text-lg text-zinc-800 font-medium border-b-2 mt-5 border-orange-300 hover:text-zinc-600 transition-colors'>Подробнее</Link>
                 </div>
             </div>
         </div>
