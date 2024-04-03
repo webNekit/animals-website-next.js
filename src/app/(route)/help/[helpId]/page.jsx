@@ -3,7 +3,7 @@ import SingleBanner from '@/components/Single/SingleBanner/SingleBanner';
 import SingleText from '@/components/Single/SingleText/SingleText';
 import React from 'react';
 
-export default function page() {
+export default function helpById() {
   return (
     <>
       <HeaderPage introTitle={'Как нам помочь?'} />

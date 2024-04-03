@@ -2,7 +2,7 @@ import React from 'react';
 import PetsList from '../PetsList/PetsList';
 
 
-const Pets = () => {
+const Pets = (getData) => {
   return (
     <section className='w-full py-12 bg-gray-50'>
       <div className="container mx-auto">
