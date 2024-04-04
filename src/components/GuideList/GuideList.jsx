@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-const GuideList = ({ getData, cols = 3, gap = 5 }) => {
+const GuideList = ({ getData, cols = 3, gap = 7 }) => {
   return (
     <div className={`w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-${cols} gap-${gap}`}>
       {[1, 3, 4, 5].map((item, index) => {

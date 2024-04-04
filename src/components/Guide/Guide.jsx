@@ -10,7 +10,7 @@ const Guide = () => {
                 <p className="max-w-3xl text-zinc-700 px-0 sm:px-[2rem] mx-auto text-center text-lg leading-7">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus officiis libero facilis amet laborum dicta maxime asperiores reiciendis. Consectetur commodi perferendis aspernatur vero nostrum nemo.
                 </p>
-                <GuideList getData={''} cols={3} gap={7} />
+                <GuideList getData={''} cols={2} />
             </div>
         </div>
     </section>
