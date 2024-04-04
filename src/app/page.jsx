@@ -5,6 +5,8 @@ import Banner from "@/components/Banner/Banner";
 import Help from "@/components/Help/Help";
 import News from "@/components/News/News";
 import Pets from "@/components/Pets/Pets";
+import Requisites from "@/components/Requisites/Requisites";
+import Guide from "@/components/Guide/Guide";
 
 
 export default function Home() {
@@ -12,9 +14,11 @@ export default function Home() {
     <>
       <Banner />
       <About />
-      <Help getData={''} />
-      <Pets getData={''} />
       <News getData={''} />
+      <Pets getData={''} />
+      <Help getData={''} />
+      <Guide />
+      <Requisites />
     </>
   );
 }

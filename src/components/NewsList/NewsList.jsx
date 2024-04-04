@@ -19,7 +19,7 @@ const NewsList = ({ getData }) => {
                                 </span>
                             </div>
                         </div>
-                        <Link href={''} className="aspect-square h-[40px] bg-primary hover:bg-primary/60 flex items-center justify-center rounded-full transition-colors">
+                        <Link href={'/articles/' + 'lorem-ipsum-dolor'} className="aspect-square h-[40px] bg-primary hover:bg-primary/60 flex items-center justify-center rounded-full transition-colors">
                             <FaAngleRight className="text-sm text-zinc-600" />
                         </Link>
                     </div>

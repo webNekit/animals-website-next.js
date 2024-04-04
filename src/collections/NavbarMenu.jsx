@@ -1,10 +1,10 @@
 const NavbarMenu = [
     { label: 'О нас', url: '/about' },
-    { label: 'Питомцы', url: '/' },
+    { label: 'Питомцы', url: '/pets' },
     { label: 'Реквизиты', url: '/requisites' },
     { label: 'Отчеты', url: '/reports' },
-    { label: 'Видео', url: '/videos' },  
-    { label: 'Блог', url: '/articles' },  
+    { label: 'Справочник', url: '/guides' },  
+    { label: 'Новости', url: '/articles' },  
     { label: 'Контакты', url: '/contacts' },  
     
 ];
