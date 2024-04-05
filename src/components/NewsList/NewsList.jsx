@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaAngleRight } from "react-icons/fa6";
 import { FaRegCalendar } from "react-icons/fa6";
+
+const LoadingLink = ({ href, children }) => {
+    const [isLoading, setIsLoading] = useState(false);
+  
+    const handleClick = () => {
+      setIsLoading(true);
+      // Вы можете добавить задержку, если хотите, чтобы текст "Загрузка" отображался некоторое время
+      // setTimeout(() => {
+      //   window.location.href = href;
+      // }, 1000); // Пример задержки в 1 секунду
+      window.location.href = href; // Здесь вы можете сразу выполнять переход на страницу
+    };
+  
+    return (
+      <>
+        <Link href={href} onClick={handleClick} style={{ pointerEvents: isLoading ? 'none' : 'auto' }}>
+            {isLoading ? 'Загрузка...' : children}
+        </Link>
+      </>
+    );
+  };
+  
 
 const NewsList = ({ getData }) => {
     return (
@@ -24,6 +46,7 @@ const NewsList = ({ getData }) => {
                                 <Link href={'/articles/' + 'lorem-ipsum-dolor'} className="aspect-square h-[40px] bg-primary hover:bg-primary/60 flex items-center justify-center rounded-full transition-colors">
                                     <FaAngleRight className="text-sm text-zinc-600" />
                                 </Link>
+                                <LoadingLink href={'/articles/' + 'lorem-ipsum-dolor'}>Подробнее</LoadingLink>
                             </div>
                         </div>
                         <Image src={'/assets/img/news/img-1.jpg'} alt={''} width={300} height={300} className='w-full h-full object-cover object-center' />
