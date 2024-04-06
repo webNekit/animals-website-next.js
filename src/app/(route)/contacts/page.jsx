@@ -6,7 +6,7 @@ export default function contacts() {
   return (
     <>
         <HeaderPage introTitle={'Контакты'} />
-        <section className="w-full py-12 bg-gray-50">
+        <section className="w-full py-12">
             <div className="container mx-auto">
                 <div className="w-full">
                     <ul className="flex flex-col gap-2">

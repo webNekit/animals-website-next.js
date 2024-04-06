@@ -20,8 +20,8 @@ export default function RootLayout({ children }) {
       <body className={`${roboto.className} w-full bg-white text-zinc-500`}>
         <div className="__next">
           <Header />
-          <main className="w-full" id="main">
-            <div className="w-full" id="content-page">
+          <main className="w-full min-h-[70vh]" id="main">
+            <div className="w-full min-h-full" id="content-page">
               {children}
             </div>
           </main>
