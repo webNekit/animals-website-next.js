@@ -9,7 +9,7 @@ const News = ({ getData }) => {
       <div className="container mx-auto">
         <div className="w-full flex flex-col items-center gap-10">
           <h2 className="section-title text-center">важные новости</h2>
-          <NewsList getData={''} />
+          <NewsList getData={getData} />
         </div>
       </div>
     </section>

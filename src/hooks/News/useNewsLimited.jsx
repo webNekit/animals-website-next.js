@@ -2,8 +2,7 @@
 import { axiosClient } from '@/utils/GlobalApi';
 import React, { useEffect, useState } from 'react';
 
-const useNews = () => {
-
+const useNewsLimited = () => {
     const [ postData, setPostData ] = useState([]);
 
     useEffect(() => {
@@ -11,7 +10,7 @@ const useNews = () => {
     }, [])
 
   const getPosts = () => {
-    axiosClient.get("/posts?sort[0]=id:desc&populate=*").then(resp => {
+    axiosClient.get("/posts?pagination[pageSize]=6&sort[0]=id:desc&populate=*").then(resp => {
         setPostData(resp.data.data);
     }).catch(error => {
         console.log("Ошибка получения данных", error)
@@ -20,4 +19,4 @@ const useNews = () => {
   return postData;
 }
 
-export default useNews
+export default useNewsLimited
