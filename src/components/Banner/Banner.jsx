@@ -8,7 +8,7 @@ import SwiperButton from '../SwiperButtons/SwiperButton';
 // styles for swiper
 import 'swiper/css';
 import 'swiper/css/navigation';
-const Banner = () => {
+const Banner = ({ getData }) => {
   return (
     <section className='w-full py-12'>
       <div className="container mx-auto">
