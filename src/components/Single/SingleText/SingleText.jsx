@@ -2,7 +2,7 @@ import React from 'react'
 
 const SingleText = ({ getText }) => {
   return (
-    <section className="w-full py-10">
+    <section className="w-full py-12">
         <div className="max-w-3xl px-[2rem] mx-auto">
             <div className="w-full">
                 <p className="text-lg text-zinc-700">
