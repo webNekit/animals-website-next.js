@@ -9,20 +9,22 @@ import Requisites from "@/components/Requisites/Requisites";
 import Guide from "@/components/Guide/Guide";
 import useNewsLimited from "@/hooks/News/useNewsLimited";
 import usePopularNews from '@/hooks/News/usePopularNews';
+import usePets from "@/hooks/Pets/usePets";
 
 
 export default function Home() {
   const postLimit = useNewsLimited();
   const postPopular = usePopularNews();
+  const petsData = usePets();
 
   return (
     <>
       <Banner getData={postPopular} />
       <About />
       <News getData={postLimit} />
-      <Pets getData={''} />
+      <Pets getData={petsData} />
       <Help getData={''} />
-      <Guide />
+      <Guide getData={''} />
       <Requisites />
     </>
   );
