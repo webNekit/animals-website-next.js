@@ -5,7 +5,7 @@ const SingleInfo = ({getData}) => {
     <section className='w-full pt-6'>
       <div className='max-w-3xl px-[2rem] mx-auto'>
         <div className="w-full">
-            <p className="text-left text-md">{getData}</p>
+            <p className="text-left font- text-md">{getData}</p>
         </div>
       </div>
     </section>

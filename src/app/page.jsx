@@ -9,13 +9,13 @@ import Requisites from "@/components/Requisites/Requisites";
 import Guide from "@/components/Guide/Guide";
 import useNewsLimited from "@/hooks/News/useNewsLimited";
 import usePopularNews from '@/hooks/News/usePopularNews';
-import usePets from "@/hooks/Pets/usePets";
+import useLimitPits from "@/hooks/Pets/useLimitPits";
 
 
 export default function Home() {
   const postLimit = useNewsLimited();
   const postPopular = usePopularNews();
-  const petsData = usePets();
+  const petsData = useLimitPits();
 
   return (
     <>
