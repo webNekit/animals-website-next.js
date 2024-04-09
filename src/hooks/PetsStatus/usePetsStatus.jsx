@@ -1,3 +1,4 @@
+"use client";
 import { axiosClient } from '@/utils/GlobalApi';
 import React, { useEffect, useState } from 'react'
 
