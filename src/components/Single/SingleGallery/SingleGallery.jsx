@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import React, { useEffect } from 'react';
 
+
 const SingleGallery = ({ getImage }) => {
     return (
         <section className='w-full py-12'>

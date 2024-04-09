@@ -29,13 +29,19 @@ export default function pets() {
         <div className="container mx-auto">
           <ul className="flex items-center gap-4 pb-10">
             <li className="inline-flex">
-              <button onClick={handleShowAllStatus} className='bg-primary text-white px-4 py-2 rounded-full cursor-pointer transition-all hover:bg-primary/80'>Все категории</button>
+              <button onClick={handleShowAllStatus} className='bg-primary border-2 border-primary font-medium text-white px-4 py-2 rounded-full cursor-pointer transition-all hover:bg-primary/80'>Все категории</button>
             </li>
-            {petsStatus.map((item, index) => {
+            {petsStatus ? petsStatus.map((item, index) => {
               return (
                 <li key={index} className="inline-flex">
-                  <button onClick={() => handleStatusClick(item.id)} className='bg-primary text-white px-4 py-2 rounded-full cursor-pointer transition-all hover:bg-primary/80'>{item.attributes?.name}</button>
+                  <button onClick={() => handleStatusClick(item.id)} className='border-2 border-primary text-zinc-800 font-medium px-4 py-2 rounded-full cursor-pointer transition-all hover:bg-primary/80'>{item.attributes?.name}</button>
                 </li>
+              );
+            }) : [1,2,3,4].map((item, index) => {
+              return (
+                <>
+                  <div className='w-[115px] h-[43.2px] rounded-full bg-gray-200 animate-pulse'></div>
+                </>
               );
             })}
           </ul>
