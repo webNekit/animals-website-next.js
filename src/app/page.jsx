@@ -10,12 +10,14 @@ import Guide from "@/components/Guide/Guide";
 import useNewsLimited from "@/hooks/News/useNewsLimited";
 import usePopularNews from '@/hooks/News/usePopularNews';
 import useLimitPits from "@/hooks/Pets/useLimitPits";
+import useLimitGuides from "@/hooks/Guides/useLimitGuides";
 
 
 export default function Home() {
   const postLimit = useNewsLimited();
   const postPopular = usePopularNews();
   const petsData = useLimitPits();
+  const guidesData = useLimitGuides(4);
 
   return (
     <>
@@ -24,7 +26,7 @@ export default function Home() {
       <News getData={postLimit} />
       <Pets getData={petsData} />
       <Help getData={''} />
-      <Guide getData={''} />
+      <Guide getData={guidesData} />
       <Requisites />
     </>
   );

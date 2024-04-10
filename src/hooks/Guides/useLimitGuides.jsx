@@ -1,8 +1,8 @@
 "use client";
 import { axiosClient } from '@/utils/GlobalApi';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
-const useLimitGuides = () => {
+const useLimitGuides = (count) => {
 
     const [guidesData, setGuidesData] = useState([]);
 
@@ -11,7 +11,7 @@ const useLimitGuides = () => {
     }, [])
 
   const getLimitGuides = () => {
-    axiosClient.get("api/guides?sord[0]=id:desc&pagination[pageSize]=4&populate[0]=content.image").then(resp => {
+    axiosClient.get("/guides?sort[0]=id:desc&pagination[pageSize]=" + count + "&populate[0]=content.image").then(resp => {
         console.log(resp.data.data);
         setGuidesData(resp.data.data);
     }).catch(error => {
@@ -23,4 +23,4 @@ const useLimitGuides = () => {
 
 }
 
-export default useLimitGuides
+export default useLimitGuides;
