@@ -26,7 +26,7 @@ export default function Home() {
       <About sectionData={aboutData} />
       <News getData={postLimit} />
       <Pets getData={petsData} />
-      <Help getData={''} />
+      <Help getData={''} helpData={''}/>
       <Guide getData={guidesData} />
       <Requisites />
     </>

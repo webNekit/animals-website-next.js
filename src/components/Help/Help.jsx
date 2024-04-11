@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { FaChevronRight } from "react-icons/fa6";
 
-const Help = ({ getData }) => {
+const Help = ({ getData, helpData }) => {
   return (
     <section className='w-full py-12'>
       <div className="container mx-auto">
