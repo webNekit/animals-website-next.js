@@ -12,6 +12,8 @@ import usePopularNews from '@/hooks/News/usePopularNews';
 import useLimitPits from "@/hooks/Pets/useLimitPits";
 import useLimitGuides from "@/hooks/Guides/useLimitGuides";
 import useAbout from "@/hooks/SectionsHook/useAbout";
+import useHelp from "@/hooks/SectionsHook/useHelp";
+import useVariant from "@/hooks/SectionsHook/useVariant";
 
 
 export default function Home() {
@@ -20,13 +22,16 @@ export default function Home() {
   const petsData = useLimitPits();
   const guidesData = useLimitGuides(4);
   const aboutData = useAbout();
+  const helpData = useHelp();
+  const variantData = useVariant();
+
   return (
     <>
       <Banner getData={postPopular} />
       <About sectionData={aboutData} />
       <News getData={postLimit} />
-      <Pets getData={petsData} />
-      <Help getData={''} helpData={''}/>
+      <Pets getData={petsData} detailHelp={helpData} />
+      <Help getData={''} detailData={variantData}/>
       <Guide getData={guidesData} />
       <Requisites />
     </>

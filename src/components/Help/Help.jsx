@@ -2,15 +2,13 @@ import Link from 'next/link';
 import React from 'react';
 import { FaChevronRight } from "react-icons/fa6";
 
-const Help = ({ getData, helpData }) => {
+const Help = ({ getData, detailData }) => {
   return (
     <section className='w-full py-12'>
       <div className="container mx-auto">
         <div className="w-full flex flex-col gap-10">
-          <h2 className="section-title">Как вы можете помочь?</h2>
-          <p className="text-center text-xl max-w-xl mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad magni iure ratione, totam odio error ullam cupiditate eum ipsam. Pariatur dolorem nesciunt explicabo perspiciatis itaque!
-          </p>
+          <h2 className="section-title">{detailData.attributes?.title}</h2>
+          <p className="text-center text-xl max-w-xl mx-auto">{detailData.attributes?.description}</p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
             {[1, 2, 3, 4, 5, 6].map((item) => {
               return (
