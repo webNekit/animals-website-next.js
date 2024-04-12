@@ -14,6 +14,7 @@ import useLimitGuides from "@/hooks/Guides/useLimitGuides";
 import useAbout from "@/hooks/SectionsHook/useAbout";
 import useHelp from "@/hooks/SectionsHook/useHelp";
 import useVariant from "@/hooks/SectionsHook/useVariant";
+import useGuide from "@/hooks/SectionsHook/useGuide";
 
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
   const aboutData = useAbout();
   const helpData = useHelp();
   const variantData = useVariant();
+  const guideData = useGuide();
 
   return (
     <>
@@ -32,8 +34,8 @@ export default function Home() {
       <News getData={postLimit} />
       <Pets getData={petsData} detailHelp={helpData} />
       <Help getData={''} detailData={variantData}/>
-      <Guide getData={guidesData} />
-      <Requisites />
+      <Guide getData={guidesData}  detailData={guideData} />
+      <Requisites detailData={''} />
     </>
   );
 }

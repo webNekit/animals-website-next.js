@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Requisites = () => {
+const Requisites = ({ detailData }) => {
   return (
     <section className="w-full py-12 bg-[url(/assets/img/requisites/bg.avif)] bg-cover bg-no-repeat bg-center">
         <div className="container mx-auto">
