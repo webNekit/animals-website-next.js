@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import NavbarMenu from '@/collections/NavbarMenu';
 import useSettings from '@/hooks/SectionsHook/useSettings';
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 const Footer = () => {
 
@@ -34,11 +35,15 @@ const Footer = () => {
           <div className="w-full">
             <h2 className="text-left text-lg">Мы в социальных сетях</h2>
             <ul className="flex flex-wrap gap-3 pt-2">
-              <li className='inline-flex'>
-                <Link href={'https://vk.com/brand'} target='_blank'>
-                  <Image className='aspect-auto h-[35px] object-cover' src={'/assets/img/icons/VK.svg'} alt='Логотип Вконтатке' width={35} height={35} />
-                </Link>
-              </li>
+              {setting.attributes?.socials.map((item, index) => {
+                return (
+                  <li className='inline-flex'>
+                    <Link href={item.socialLink} target='_blank'>
+                      <Image className='aspect-auto h-[35px] w-auto object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + (item.socialLogo?.data.attributes?.url ?? '')} alt='Логотип Вконтатке' width={50} height={35} />
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className="w-full">
@@ -47,7 +52,7 @@ const Footer = () => {
               {setting.attributes?.contacts?.map((item, index) => {
                 return (
                   <li key={index} className="inline-flex gap-1">
-                    <span className='opacity-80'>{item.type == 'Номер телефона' ? 'Номер телефона' : 'Email адрес' }:</span>
+                    <span className='opacity-80'>{item.type == 'Номер телефона' ? 'Номер телефона' : 'Email адрес'}:</span>
                     <Link className='text-zinc-500 font-medium transition-colors duration-300 hover:text-zinc-500/50' href={item.type == 'Номер телефона' ? 'tel:' + item.contactValue : 'mailto:' + item.contactValue}>{item.contactValue}</Link>
                   </li>
                 );
