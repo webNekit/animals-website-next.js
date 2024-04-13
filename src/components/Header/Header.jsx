@@ -5,8 +5,12 @@ import { FaPhone, FaBars } from "react-icons/fa6";
 import Navbar from '../Navbar/Navbar';
 import Image from 'next/image';
 import MobileNavbar from '../MobileNavbar/MobileNavbar';
+import useSettings from '@/hooks/SectionsHook/useSettings';
 
 const Header = () => {
+
+
+  const setting = useSettings();
 
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -16,17 +20,17 @@ const Header = () => {
         <div className="w-full flex flex-col gap-4 sm:flex-row items-center justify-between py-4 border-b border-black/10">
           <ul className="flex items-center gap-4 order-3 sm:order-1">
             <li className='inline-flex'>
-              <Link className='font-medium text-xl flex items-center gap-2 transition-all hover:opacity-80' href="tel:+79692881531">
+              <Link className='font-medium text-xl flex items-center gap-2 transition-all hover:opacity-80' href={"tel:" + setting.attributes?.contacts[0].contactValue}>
                 <span className='text-base'>
                   <FaPhone />
                 </span>
-                89692881531
+                {setting.attributes?.contacts[0].contactValue}
               </Link>
             </li>
           </ul>
           <div className='inline-flex order-1 sm:order-2'>
             <Link href="/" className=''>
-              <Image src="/assets/img/logo.png" alt="Логотип сайта" width={200} height={60} />
+              <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + (setting.attributes?.siteLogo?.data.attributes?.url ?? '')} alt="Логотип сайта" width={200} height={60} />
             </Link>
           </div>
           <div className='inline-flex order-2 sm:order-3'>
