@@ -11,7 +11,6 @@ const useGuides = () => {
   
   const getGuides = () => {
       axiosClient.get("/guides?sort[0]=id:desc&populate[0]=content.image").then((resp) => {
-              console.log(resp.data.data);
               setGuidesData(resp.data.data);
           }).catch((error) => {
               console.log("Ошибка получения данных", error);

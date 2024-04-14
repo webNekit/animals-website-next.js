@@ -11,7 +11,6 @@ const useVariant = () => {
  
  const getVariants = () => {
     axiosClient.get("/variant?populate=*").then(resp => {
-       console.log(resp.data.data);
        setVariantData(resp.data.data);
     }).catch(error => {
        console.log("Ошибка получения данных", error)

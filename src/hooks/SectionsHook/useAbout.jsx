@@ -11,7 +11,6 @@ const useAbout = () => {
 
   const getAboutData = () => {
     axiosClient.get('/about?populate=images.images').then(resp => {
-        console.log(resp.data.data);
         setAboutData(resp.data.data);
     }).catch(error => {
         console.log("Ошибка получения данных", error)

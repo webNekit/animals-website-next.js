@@ -37,7 +37,7 @@ const Footer = () => {
             <ul className="flex flex-wrap gap-3 pt-2">
               {setting.attributes?.socials.map((item, index) => {
                 return (
-                  <li className='inline-flex'>
+                  <li key={index} className='inline-flex'>
                     <Link href={item.socialLink} target='_blank'>
                       <Image className='aspect-auto h-[35px] w-auto object-cover' src={process.env.NEXT_PUBLIC_STRAPI_API_URL + (item.socialLogo?.data.attributes?.url ?? '')} alt='Логотип Вконтатке' width={50} height={35} />
                     </Link>

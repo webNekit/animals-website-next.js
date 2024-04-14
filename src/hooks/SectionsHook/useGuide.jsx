@@ -11,7 +11,6 @@ const useGuide = () => {
   
   const getGuideData = () => {
      axiosClient.get("/guidesection?populate=*").then(resp => {
-        console.log(resp.data.data);
         setGuideData(resp.data.data);
      }).catch(error => {
         console.log("Ошибка получения данных", error)

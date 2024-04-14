@@ -12,7 +12,6 @@ const useReports = () => {
 
     const getReports = () => {
         axiosClient.get("/reports?sort[0]=id:desc&populate=*").then(resp => {
-            console.log(resp.data.data);
             setReportsData(resp.data.data);
         }).catch(error => {
             console.log("Ошибка получения данных", error)

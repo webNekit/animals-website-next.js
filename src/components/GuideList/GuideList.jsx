@@ -16,7 +16,7 @@ const GuideList = ({ getData, cols = 3, gap = 7 }) => {
         );
       }) : [1,2,3].map((item, index) => {
         return(
-          <div className="w-full h-[232px] p-5 rounded-lg bg-gray-100 animate-pulse">
+          <div key={index} className="w-full h-[232px] p-5 rounded-lg bg-gray-100 animate-pulse">
             <div className="w-full h-5 rounded-lg bg-gray-200 animate-pulse"></div>
             <div className="w-full h-[70%] mt-5 rounded-lg bg-gray-200 animate-pulse"></div>
           </div>

@@ -11,7 +11,6 @@ const useSingleGuide = (slug) => {
  
  const getSingleGuide = () => {
      axiosClient.get("/guides?filters[slug]=" + slug + "&populate[0]=content.image").then((resp) => {
-             console.log(resp.data.data[0]);
              setSingleData(resp.data.data[0]);
          }).catch((error) => {
              console.log("Ошибка получения данных", error);

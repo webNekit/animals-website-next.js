@@ -24,17 +24,20 @@ const Header = () => {
                 <span className='text-base'>
                   <FaPhone />
                 </span>
-                {setting.attributes?.contacts[0].contactValue}
+                {setting.attributes?.contacts[0].contactValue ? setting.attributes?.contacts[0].contactValue : <div className='w-[150px] h-7 rounded-lg bg-white/30 animate-pulse'></div>}
               </Link>
             </li>
           </ul>
           <div className='inline-flex order-1 sm:order-2'>
             <Link href="/" className=''>
-              <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + (setting.attributes?.siteLogo?.data.attributes?.url ?? '')} alt="Логотип сайта" width={200} height={60} />
+              {setting.attributes?.siteLogo?.data.attributes?.url ? <Image src={process.env.NEXT_PUBLIC_STRAPI_API_URL + (setting.attributes?.siteLogo?.data.attributes?.url ?? '')} alt="Логотип сайта" width={200} height={60} />
+               : <div className='w-[200px] h-[80px] rounded-lg bg-white/30 animate-pulse'></div> 
+              }
+             
             </Link>
           </div>
           <div className='inline-flex order-2 sm:order-3'>
-            <Link href={'/'} className='px-4 py-2 rounded-full bg-pink-400 text-white transition-all hover:bg-pink-500 duration-200'>Помочь прямо сейчас</Link>
+            <Link href={'/requisites'} className='px-4 py-2 rounded-full bg-pink-400 text-white transition-all hover:bg-pink-500 duration-200'>Помочь прямо сейчас</Link>
           </div>
         </div>
         <div className="w-full flex items-center flex-col py-4 sm:py-0 sm:flex-row">

@@ -11,7 +11,6 @@ const useSettings = () => {
     
     const getDetailSettings = () => {
        axiosClient.get("/setting?populate[0]=socials.socialLogo&populate[1]=contacts&populate[2]=siteLogo").then(resp => {
-          console.log(resp.data.data);
           setSettingsData(resp.data.data);
        }).catch(error => {
           console.log("Ошибка получения данных", error)

@@ -11,7 +11,6 @@ const useHelp = () => {
     
     const getHelpData = () => {
        axiosClient.get("/helpsection?populate=*").then(resp => {
-          console.log(resp.data.data);
           setHelpData(resp.data.data);
        }).catch(error => {
           console.log("Ошибка получения данных", error)

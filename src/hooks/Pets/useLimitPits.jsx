@@ -12,7 +12,6 @@ const useLimitPits = () => {
 
   const getPets = () => {
     axiosClient.get("/pets?pagination[pageSize]=6&sort[0]=id:desc&populate=*").then(resp => {
-        console.log(resp.data.data);
         setPetsData(resp.data.data);
     }).catch(error => {
         console.log("Ошибка получения данных", error)

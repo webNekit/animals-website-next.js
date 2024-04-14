@@ -11,7 +11,6 @@ const useLimitHelp = () => {
   
   const getLimitHelp = () => {
      axiosClient.get("helps?sort[0]=id:desc&pagination[pageSize]=6&populate=content.image").then(resp => {
-        console.log(resp.data.data);
         setHelpLimitData(resp.data.data);
      }).catch(error => {
         console.log("Ошибка получения данных", error)

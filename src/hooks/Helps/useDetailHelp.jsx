@@ -11,7 +11,6 @@ const useDetailHelp = (slug) => {
     
     const getDetailHelp = () => {
        axiosClient.get("helps?filters[slug][$eqi]=" + slug + "&populate=content.image").then(resp => {
-          console.log(resp.data.data[0]);
           setHelpDetailData(resp.data.data[0]);
        }).catch(error => {
           console.log("Ошибка получения данных", error)

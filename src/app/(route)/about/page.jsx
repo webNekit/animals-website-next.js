@@ -1,9 +1,7 @@
+"use client";
+
 import React from 'react';
 import HeaderPage from '@/components/HeaderPage/HeaderPage';
-
-export const metadata = {
-    title: 'О нас'
-}
 
 export default function about() {
   return (

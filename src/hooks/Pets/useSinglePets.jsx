@@ -12,7 +12,6 @@ const useSinglePets = (id) => {
 
     const singlePets = () => {
         axiosClient.get("/pets/" + id + "?populate=*").then(resp => {
-            console.log(resp.data.data);
             setDataPets(resp.data.data);
         }).catch(error => {
             console.log("Ошибка получения данных", error)

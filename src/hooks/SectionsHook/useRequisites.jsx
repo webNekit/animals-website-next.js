@@ -10,7 +10,6 @@ const useRequisites = () => {
     
     const getReqDetail = () => {
        axiosClient.get("/reqsection?populate=*").then(resp => {
-          console.log(resp.data.data);
           setReqData(resp.data.data);
        }).catch(error => {
           console.log("Ошибка получения данных", error)
