@@ -16,7 +16,7 @@ export default function articles() {
           <div className="container mx-auto">
             <NewsList getData={postData} />
             <div className='w-full flex justify-center pt-6'>
-              <button onClick={loadMorePost} className='px-4 py-2 bg-primary rounded-lg text-zinc-900 font-medium transition-colors hover:bg-primary/80 hover:text-zinc-600'>{isLoading ? "загрузка" : "Загрузить еще"}</button>
+              <button onClick={loadMorePost} className='px-4 py-2 w-full sm:w-auto bg-primary rounded-lg text-zinc-900 font-medium transition-colors hover:bg-primary/80 hover:text-zinc-600'>{isLoading ? "загрузка" : "Загрузить еще"}</button>
             </div>
           </div>
         </section>
