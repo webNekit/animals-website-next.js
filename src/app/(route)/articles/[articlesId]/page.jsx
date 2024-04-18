@@ -4,6 +4,7 @@ import Reccomendation from '@/components/Reccomendation/Reccomendation';
 import SingleBanner from '@/components/Single/SingleBanner/SingleBanner';
 import SingleCkeditor from '@/components/Single/SingleCkeditor/SingleCkeditor';
 import SingleGallery from '@/components/Single/SingleGallery/SingleGallery';
+import SingleShareSocial from '@/components/Single/SingleShareSocial/SingleShareSocial';
 import SingleText from '@/components/Single/SingleText/SingleText';
 import useRecomendedNews from '@/hooks/News/useRecomendedNews';
 import useSingleNews from '@/hooks/News/useSingleNews';
@@ -14,13 +15,14 @@ export default function detailArticles({ params }) {
   const postRecomended = useRecomendedNews(params.articlesId);
 
   return (
-   <>
-     <HeaderPage introTitle={postDetail.attributes?.postName} />
-     <SingleText getText={postDetail.attributes?.smallText} />
-     <SingleBanner getImage={process.env.NEXT_PUBLIC_STRAPI_API_URL + (postDetail?.attributes?.postImage?.data.attributes?.url ?? '')} getAlt={''} />
-     <SingleCkeditor getText={postDetail.attributes?.longText} />
-     <SingleGallery getImage={postDetail} />
-     <Reccomendation getData={postRecomended} />
-   </>
+    <>
+      <HeaderPage introTitle={postDetail.attributes?.postName} />
+      <SingleText getText={postDetail.attributes?.smallText} />
+      <SingleBanner getImage={process.env.NEXT_PUBLIC_STRAPI_API_URL + (postDetail?.attributes?.postImage?.data.attributes?.url ?? '')} getAlt={''} />
+      <SingleCkeditor getText={postDetail.attributes?.longText} />
+      <SingleGallery getImage={postDetail} />
+      <SingleShareSocial url={process.env.NEXT_PUBLIC_STRAPI_API_URL + '/articles/' + postDetail.attributes?.slug} image={process.env.NEXT_PUBLIC_STRAPI_API_URL + (postDetail?.attributes?.postImage?.data.attributes?.url ?? '')} title={postDetail.attributes?.postName}/>
+      <Reccomendation getData={postRecomended} />
+    </>
   )
 }
